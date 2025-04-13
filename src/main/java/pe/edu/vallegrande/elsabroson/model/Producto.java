@@ -1,11 +1,6 @@
 package pe.edu.vallegrande.elsabroson.model;
-
-
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -30,11 +25,9 @@ public class Producto {
     private double precio;
 
     @Column(name = "estado")
-    private String estado  = "HABILITADO";
+    private String estado  = "ACTIVO";
 
-    @CreationTimestamp
-    @Column(name = "registro_actual", updatable = false)
-    private LocalDateTime registro_actual;
+ 
 
 
 }
